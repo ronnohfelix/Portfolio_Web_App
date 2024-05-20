@@ -3,13 +3,15 @@ from .models import Project, Tag
 
 # Create your views here.
 def home(request):
+    projects = Project.objects.all()
+    tags = Tag.objects.all()
     
-    return render(request, 'home.html')
+    return render(request, 'home.html', {'projects': projects, 'tags': tags})
 
 def contact(request):
     
     return render(request, 'contact.html')
 
-def projects(request, id):
+def project(request, id):
     project = get_object_or_404(Project, pk=id)
     return render(request, 'project.html', {'project': project})

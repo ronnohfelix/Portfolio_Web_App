@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Portfolio - Home
+{% endblock title %}
+
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/project.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+<h1>This is the project page</h1>
+{% endblock content %}
+
+{% block extra_js %}
+<script src="{% static 'js/project.js' %}"></script>
+{% endblock extra_js %}
