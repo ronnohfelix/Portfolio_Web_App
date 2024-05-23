@@ -21,4 +21,4 @@ class Image(models.Model):
     image = models.ImageField(upload_to='images/')
     
     def __str__(self):
-        return self.project.title + ' Image'
+        return f"{self.project.title} Image"

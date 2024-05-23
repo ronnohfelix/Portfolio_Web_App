@@ -11,11 +11,11 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ('title', 'link')
     inlines = [ImageInline]
     search_fields = ['title', 'description']
-    list_filter = ['tags']
+    list_filter = ('tags',)
 
 class TagAdmin(admin.ModelAdmin):
     list_display = ('name',)
-    search_fields = ['name']
+    search_fields = ('name',)
 
 admin.site.register(Tag, TagAdmin)
 admin.site.register(Project, ProjectAdmin)
